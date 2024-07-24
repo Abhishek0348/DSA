@@ -2,22 +2,20 @@
 
 using namespace std;
 
-bool CheckSorted(vector<int>nums, int n){
-    int count = 0;
-    
-    for (int i = 0; i < n; i++) {
-        if (nums[i] > nums[(i + 1) % n]) {
-            count++;
-        }
+int MissingNo(vector<int> nums, int n){
+    int sum = n*(n+1)/2;
+    int sum2 = 0;
+    for(int i=0; i<n; i++){
+        sum2 = sum2 + nums[i];
     }
-    
-    return count <= 1;
+    int res = sum - sum2;
+    cout<<res;
 }
 
 int main()
 {
-  vector<int> nums = {3,4,5,1,2};
+  vector<int> nums = {1,0,3,4,5};
   int n = nums.size();
-  cout << CheckSorted(nums,n);
+  MissingNo(nums,n);
   return 0;
 }
