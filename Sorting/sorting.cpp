@@ -59,10 +59,8 @@ int main()
 {
     vector<int> arr;
     int n;
-    cout<<"Define Size of Arr : ";
     cin >> n;
 
-    cout<<"Enter the nos in arr ";
     for(int i = 0; i < n; i++){
         int value;
         cin >> value;
