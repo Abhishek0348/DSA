@@ -15,7 +15,7 @@ void PrefixString(vector<string>& v,int n){
                 break;
             }
         }
-        cout<<ans<<endl;
+    cout<<ans<<endl;
 }
 
 int main()
