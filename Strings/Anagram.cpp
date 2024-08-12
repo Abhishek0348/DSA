@@ -2,8 +2,7 @@
 
 using namespace std;
 
-// Anagram is like two words are formed with the same chars
-
+//Anagram is like two words are formed with the same chars
 
 bool CheckAnagram(string s, string t)
 {
@@ -15,6 +14,6 @@ bool CheckAnagram(string s, string t)
 int main()
 {
     string s = "ant", goal = "tna";
-    cout<< CheckAnagram(s, goal);
+    cout << CheckAnagram(s, goal);
     return 0;
 }
