@@ -14,19 +14,16 @@ public:
         int left = 0, bottom = matrix.size() - 1;
 
         while (top <= bottom && left <= right) {
-            // Traverse from left to right across the top row
             for (int i = left; i <= right; i++) {
                 spiral.push_back(matrix[top][i]);
             }
             top++;
 
-            // Traverse from top to bottom down the rightmost column
             for (int i = top; i <= bottom; i++) {
                 spiral.push_back(matrix[i][right]);
             }
             right--;
 
-            // Traverse from right to left across the bottom row (if rows remain)
             if (top <= bottom) {
                 for (int i = right; i >= left; --i) {
                     spiral.push_back(matrix[bottom][i]);
@@ -34,7 +31,6 @@ public:
                 bottom--;
             }
 
-            // Traverse from bottom to top up the leftmost column (if columns remain)
             if (left <= right) {
                 for (int i = bottom; i >= top; --i) {
                     spiral.push_back(matrix[i][left]);
